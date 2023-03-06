@@ -1,3 +1,43 @@
-<p>
-  add-todo-list works!
-</p>
+<h1 style="text-align: center;">
+  What did you do today?
+</h1>
+
+<div class="container-center-from">
+  <div class="center">
+
+    
+    <form [formGroup]="todoForm" (ngSubmit)="onSubmit()">
+
+      <div>
+        <label for="activity">
+          Activity
+        </label>
+        <input id="activity" type="text" formControlName="activity">
+      </div>
+    
+      <div>
+        <label for="type">
+          Type
+        </label>
+        <input id="type" type="text" formControlName="type">
+      </div>
+
+      <div>
+        <label for="date">
+          Date
+        </label>
+        <input id="date" type="date" formControlName="date">
+      </div>
+
+      <div>
+        <label for="time">
+          Time
+        </label>
+        <input id="time" type="time" formControlName="time">
+      </div>
+
+      <button class="button" type="submit"> Submit </button>
+
+    </form>
+  </div>
+</div>
