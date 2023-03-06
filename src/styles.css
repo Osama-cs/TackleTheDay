@@ -1,9 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
 
-/* center stuff */
+/* Global Stuff */
+
+* {
+    font-family: 'Lato';
+    background-color: rgb(113, 217, 226);
+    color: azure;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url(src\assets\Lato-Regular.ttf);
+}
+
+/* Center Stuff */
 
 .container-center { 
-    height: 10px;
+    height: 35px;
     position: relative;
     /* border: 3px solid green;  */
   }
@@ -27,11 +40,13 @@
     border-radius: 2px;
     font-size: 14px;
     cursor: pointer;
-    background-color: #1976d2;
+    background-color: #62cf8c;
     color: white;
     border: none;
     float: left;
   }
+
+  /* #1976d2 */
 
   .button:hover, button:hover {
     opacity: 0.8;

@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { AddTodoListComponent } from './add-todo-list/add-todo-list.component';
 
 @NgModule({
-  declarations: [	
+  declarations: [
     AppComponent,
-      LandingPageComponent
-   ],
+    LandingPageComponent,
+    AddTodoListComponent
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
