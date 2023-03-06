@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-add-todo-list',
@@ -7,9 +8,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddTodoListComponent implements OnInit {
 
-  constructor() { }
+
+  todoForm = this.formBuilder.group({
+    activity: "",
+    type: "",
+    date: "",
+    time: "",
+  })
+
+
+  constructor(private formBuilder: FormBuilder,) { }
 
   ngOnInit() {
+  }
+
+  onSubmit(): void {
+    // Process todo data here
+    this.todoForm.reset();
   }
 
 }
