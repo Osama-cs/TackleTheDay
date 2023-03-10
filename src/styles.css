@@ -1,5 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
+@import "~bootstrap/dist/css/bootstrap.css";
+
 /* Global Stuff */
 
 * {
@@ -31,11 +33,10 @@
   }
 
   .container-center-from { 
-    height: 300px;
+    height: 350px;
     position: relative;
     /* border: 3px solid green;  */
   }
-
 
 /* Button */
 
