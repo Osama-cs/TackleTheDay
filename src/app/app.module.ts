@@ -9,14 +9,16 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AddTodoListComponent } from './add-todo-list/add-todo-list.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { DisplayTodoListComponent } from './display-todo-list/display-todo-list.component';
 
 
 @NgModule({
-  declarations: [
+  declarations: [	
     AppComponent,
     LandingPageComponent,
-    AddTodoListComponent
-  ],
+    AddTodoListComponent,
+    DisplayTodoListComponent,
+   ],
   imports: [
     BrowserModule,
     AppRoutingModule,

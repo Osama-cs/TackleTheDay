@@ -39,7 +39,8 @@
       <br />
 
       <button type="submit"
-        (click)="add(activity.value, type.value, date.value, time.value); activity.value='' && type.value='' && date.value='' && time.value='' ">
+        (click)="add(activity.value, type.value, date.value, time.value); activity.value='' && type.value='' && date.value='' && time.value='' "
+        [routerLink]="['/displaytodo']">
         Submit </button>
 
     </form>
