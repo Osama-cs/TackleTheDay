@@ -10,6 +10,7 @@ import { AddTodoListComponent } from './add-todo-list/add-todo-list.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { DisplayTodoListComponent } from './display-todo-list/display-todo-list.component';
+import { InMemoryDataService } from './in-memory-data.service';
 
 
 @NgModule({
@@ -25,7 +26,9 @@ import { DisplayTodoListComponent } from './display-todo-list/display-todo-list.
     ReactiveFormsModule,
     NgbModule,
     HttpClientModule,
-    HttpClientInMemoryWebApiModule
+    HttpClientInMemoryWebApiModule.forRoot(
+      InMemoryDataService, { dataEncapsulation: false }
+    )
   ],
   providers: [],
   bootstrap: [AppComponent, LandingPageComponent]

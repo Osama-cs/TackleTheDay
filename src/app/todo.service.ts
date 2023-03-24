@@ -19,6 +19,14 @@ export class TodoService {
   constructor(private httpClient: HttpClient,
     private messageService: MessageService) { }
 
+  getTodos(): Observable<TodoItem[]>{
+    return this.httpClient.get<TodoItem[]>(this.todoURL)
+    .pipe(
+      tap(_ => this.log('fetched todos')),
+      catchError(this.handleError<TodoItem[]>('getTodos', []))
+    );
+  }
+
   addTodo(todo: TodoItem): Observable<TodoItem> {
     return this.httpClient.post<TodoItem>(this.todoURL, todo, this.httpOptions).pipe(
       tap((newTodo: TodoItem) => this.log('added todo w/ id=${newTodo.id}')),

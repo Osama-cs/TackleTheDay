@@ -11,7 +11,7 @@ import { TodoItem } from '../todo-item';
 })
 export class AddTodoListComponent implements OnInit {
 
-  todos: TodoItem[] =[];
+  todos: TodoItem[] = [];
 
 
   todoForm = this.formBuilder.group({
@@ -27,11 +27,11 @@ export class AddTodoListComponent implements OnInit {
   ngOnInit() {
   }
 
-  add(activity: string, type: string, date: string, time: string): void{
+  add(activity: string, type: string, date: string, time: string): void {
     activity = activity.trim();
     type = type.trim();
-    if (!activity && !type && !date && !time) {return;}
-    this.todoService.addTodo({activity} as TodoItem)
+    if (!activity && !type && !date && !time) { return; }
+    this.todoService.addTodo({ activity } as TodoItem)
       .subscribe(todo => {
         this.todos.push(todo);
       })
