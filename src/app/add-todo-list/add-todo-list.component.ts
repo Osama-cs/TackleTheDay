@@ -31,7 +31,7 @@ export class AddTodoListComponent implements OnInit {
     activity = activity.trim();
     type = type.trim();
     if (!activity && !type && !date && !time) { return; }
-    this.todoService.addTodo({ activity } as TodoItem)
+    this.todoService.addTodo({ activity,type,date,time } as TodoItem )
       .subscribe(todo => {
         this.todos.push(todo);
       })

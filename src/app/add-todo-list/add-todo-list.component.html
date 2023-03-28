@@ -2,36 +2,51 @@
   What did you do today?
 </h1>
 
+<br/>
+
 <div class="container-center-from">
   <div class="center">
 
 
     <form [formGroup]="todoForm" (ngSubmit)="onSubmit()">
 
+
       <div class="form-group">
         <label for="activity">
-          Activity
+          Activity:
         </label>
         <input id="activity" type="text" formControlName="activity" #activity>
       </div>
 
-      <div class="form-group">
+      <!-- <div class="form-group">
         <label for="type">
-          Type
+          What type of activity did you partake in?
         </label>
         <input id="type" type="text" formControlName="type" #type>
+      </div> -->
+
+      <div class="form-group">
+        <label for="type">
+          What type of activity did you partake in:
+        </label>
+        <select id="type" type="text" formControlName="type" #type>
+          <option value="Working">Working</option>
+          <option value="Studying">Studying</option>
+          <option value="Exercising">Exercising</option>
+        </select>
       </div>
+
 
       <div class="form-group">
         <label for="date">
-          Date
+          Date:
         </label>
         <input id="date" type="date" formControlName="date" #date>
       </div>
 
       <div class="form-group">
         <label for="time">
-          Time
+          Time:
         </label>
         <input id="time" type="time" formControlName="time" #time>
       </div>

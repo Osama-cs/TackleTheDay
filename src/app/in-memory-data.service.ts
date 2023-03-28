@@ -9,9 +9,9 @@ import { TodoItem } from './todo-item';
 export class InMemoryDataService implements InMemoryDbService {
   createDb(reqInfo?: RequestInfo | undefined): {} | Observable<{}> | Promise<{}> {
     const todos = [
-      { id: 1, activity: "walk", type: "exercise", date: "23/03/2023", time: "10:05 PM" },
-      { id: 2, activity: "did homework", type: "study", date: "25/03/2023", time: "11:00 PM" },
-      { id: 3, activity: "went to work", type: "work", date: "27/03/2023", time: "9:05 AM" }
+      { id: 1, activity: "walk", type: "Exercising", date: "23-03-2023", time: "22:05" },
+      { id: 2, activity: "did homework", type: "Studying", date: "25-03-2023", time: "23:00" },
+      { id: 3, activity: "went to work", type: "Working", date: "27-03-2023", time: "9:05" }
     ];
     return {todos};
   }
