@@ -1,12 +1,13 @@
-<p>
-  display-todo-list works!
-</p>
 
-<ul class="todos">
+<h1 style="text-align: center;">Here is your list, what have you completed?</h1>
+<br>
+
+<ul class="todo-display">
   <li *ngFor="let todoitem of todos">
-    <h1>{{todoitem.date}}</h1>
-    {{todoitem.activity}}
-    {{todoitem.type}}
-    {{todoitem.time}}
+    <h1>Date: {{todoitem.date}}</h1>
+    <h2>Activity: {{todoitem.activity}} </h2>
+    <h3>The type of activity: {{todoitem.type}}</h3>
+    <h3>Time: {{todoitem.time}}</h3>
+    <hr>
   </li>
 </ul>

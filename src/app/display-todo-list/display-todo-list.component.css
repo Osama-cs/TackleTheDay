@@ -1,3 +1,4 @@
-.todos {
+.todo-display {
     list-style-type: none;
+    text-align: center;
 }
