@@ -2,8 +2,9 @@
   display-todo-list works!
 </p>
 
-<ul>
+<ul class="todos">
   <li *ngFor="let todoitem of todos">
+    <h1>{{todoitem.date}}</h1>
     {{todoitem.activity}}
   </li>
 </ul>
