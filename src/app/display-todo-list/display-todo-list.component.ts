@@ -22,4 +22,9 @@ export class DisplayTodoListComponent implements OnInit {
     this.getTodos();
   }
 
+  delete(todo: TodoItem): void{
+    this.todos = this.todos.filter(t => t !== todo);
+    this.todoService.deleteTodo(todo.id).subscribe();
+  }
+
 }

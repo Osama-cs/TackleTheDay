@@ -1,4 +1,21 @@
+@import "~bootstrap/dist/css/bootstrap.css";
+
 .todo-display {
     list-style-type: none;
     text-align: center;
 }
+
+.center-display {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  .container-center-display { 
+    height: 50px;
+    position: relative;
+    /* border: 3px solid green;  */
+  }

@@ -34,6 +34,14 @@ export class TodoService {
     )
   }
 
+  deleteTodo(id: number): Observable<TodoItem>{
+    const url = "${this.todoURL}/${id}";
+    return this.httpClient.delete<TodoItem>(url, this.httpOptions).pipe(
+      tap(_ => this.log(`deleted todo id=${id}`)),
+      catchError(this.handleError<TodoItem>('deleteTodo'))
+    )
+  }
+
 
   /**
 * Handle Http operation that failed.
