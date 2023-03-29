@@ -2,6 +2,7 @@
   What did you do today?
 </h1>
 
+
 <br/>
 
 <div class="container-center-from">
@@ -57,6 +58,11 @@
         (click)="add(activity.value, type.value, date.value, time.value); activity.value='' && type.value='' && date.value='' && time.value='' "
         [routerLink]="['/displaytodo']">
         Submit </button>
+
+        <br/>
+        <br/>
+
+        <button [routerLink]="['']"> Home </button>
 
     </form>
   </div>
